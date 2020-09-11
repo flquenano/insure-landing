@@ -1,0 +1,122 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.intro {
+  width: 100%;
+  position: relative;
+  background: $primary-dark-violet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__content {
+    padding: 5.75rem 0;
+    margin-left: 1rem;
+    position: relative;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md {
+      left: 10%;
+      width: 90%;
+      align-items: flex-start;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    width: 90%;
+    letter-spacing: -0.5px;
+    color: $neutral-light-gray;
+    margin-bottom: 1rem;
+    @include md {
+      width: 32rem;
+      padding-top: 2rem;
+      line-height: 70px;
+      text-align: start;
+    }
+  }
+  &__text {
+    width: 85%;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: $neutral-light-gray;
+    line-height: 1.65rem;
+    @include md {
+      width: 34rem;
+      text-align: start;
+    }
+  }
+
+  &__line {
+    @include md {
+      position: relative;
+      top: -2rem;
+      border-bottom: 1px solid #fff;
+      width: 10rem;
+    }
+  }
+  &__img {
+    order: 1;
+    max-width: 47rem;
+    @include md {
+      position: relative;
+      z-index: 1;
+      order: 2;
+      width: 700px;
+      height: auto;
+      transform: scale(107.5%) translate(-35%, 20%);
+    }
+  }
+
+  &__mobile-bg {
+    position: absolute;
+    @include tablet-ls {
+      display: none;
+    }
+    &-left {
+      top: 0px;
+      left: -5%;
+    }
+    &-right {
+      right: 0px;
+      bottom: -35%;
+    }
+  }
+  &__desktop-bg {
+    display: none;
+    @include tablet-ls {
+      z-index: 10;
+      display: block;
+      position: absolute;
+    }
+    &-left {
+      @include tablet-ls {
+        top: 30%;
+        left: 0;
+        width: 25%;
+      }
+      @include md {
+        top: 70%;
+        width: auto;
+      }
+    }
+    &-right {
+      @include tablet-ls {
+        top: 0;
+        right: 0;
+        width: 40%;
+      }
+      @include md {
+        top: -15%;
+        width: auto;
+      }
+    }
+  }
+}

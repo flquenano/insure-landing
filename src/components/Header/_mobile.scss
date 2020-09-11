@@ -1,0 +1,33 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.mobile-nav {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+  top: 6rem;
+  background: $neutral-very-dark-violet
+    url("assets/images/bg-pattern-mobile-nav.svg") bottom 75px center / 100%
+    218px no-repeat;
+  color: $neutral-light-gray;
+  width: 100vw;
+  height: 100vh;
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1.5rem 0 0;
+    li {
+      font-size: 1.75rem;
+      margin: 1.5rem 0;
+    }
+    li:last-child {
+      border: 2px solid $neutral-light-gray;
+      padding: 0.75rem 5rem;
+    }
+  }
+}

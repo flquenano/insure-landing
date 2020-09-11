@@ -1,0 +1,49 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.cta {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8.75rem;
+  &__heading {
+    // padding-top: 1rem;
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: $neutral-light-gray;
+    letter-spacing: -0.5px;
+    line-height: 40px;
+    margin-bottom: 2.4rem;
+    padding: 0 1rem;
+    @include md {
+      padding: 0;
+      margin-bottom: 0;
+      text-align: start;
+      width: 50%;
+      line-height: 60px;
+    }
+  }
+  &__btn {
+    letter-spacing: -0.02;
+  }
+  &__content {
+    width: 87.5%;
+    padding: 4.5rem 0 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $primary-dark-violet
+      url("assets/images/bg-pattern-how-we-work-mobile.svg") top right / 175px
+      no-repeat;
+    @include md {
+      width: 78%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4rem 5rem;
+      background: $primary-dark-violet
+        url("assets/images/bg-pattern-how-we-work-desktop.svg") top right /
+        434px 100% no-repeat;
+    }
+  }
+}

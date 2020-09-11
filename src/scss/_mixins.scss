@@ -1,0 +1,41 @@
+@mixin tablet-pt {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet-ls {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin custom($screen) {
+  @media (min-width: $screen+"px") {
+    @content;
+  }
+}

@@ -1,0 +1,109 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.footer {
+  background: $neutral-light-gray
+    url("assets/images/bg-pattern-footer-mobile.svg") top center / 100%
+    no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include md {
+    background: $neutral-light-gray
+      url("assets/images/bg-pattern-footer-desktop.svg") top left / 37.5% 65%
+      no-repeat;
+  }
+  &__top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5.5rem;
+    @include md {
+      width: 75%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    @include md {
+      width: 80%;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__nav {
+    &-list {
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      @include md {
+        &:not(:last-child) {
+          padding-right: 12rem;
+        }
+        &:nth-child(1) {
+          padding-left: 2rem;
+        }
+      }
+    }
+    &-item {
+      text-align: center;
+      font-size: 0.9rem;
+      letter-spacing: 0.2px;
+      line-height: 18px;
+      margin-bottom: 0.8125rem;
+      color: $primary-dark-violet;
+      font-weight: $font-bold;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      @include md {
+        text-align: start;
+      }
+      &-heading {
+        font-size: 0.9rem;
+        font-weight: $font-bold;
+        letter-spacing: 0.2px;
+        text-align: center;
+        color: $primary-grayish-blue;
+        margin-bottom: 2rem;
+        @include md {
+          text-align: start;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    padding-bottom: 2rem;
+  }
+  &__sns-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 2.5rem;
+    @include md {
+      width: auto;
+    }
+  }
+  &__sns-icon {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  &__line {
+    border-bottom: 1px solid $neutral-line;
+    width: 87.5%;
+  }
+}

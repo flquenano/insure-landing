@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+  font-size: $font-size;
+  font-family: $font-body;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 250ms;
+}
+
+h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+p {
+  line-height: 1.5rem;
+  color: $primary-grayish-blue;
+}
+
+#root {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  box-shadow: 2px 0 10px $primary-dark-violet, -2px 0 10px $primary-dark-violet;
+}
